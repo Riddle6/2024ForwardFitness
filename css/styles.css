@@ -133,8 +133,14 @@ main {
 	border-radius: 8px;
 }
 
+.map {
+	border: 8px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 630px) {
+@media screen and (min-width: 630px), print {
 	
 	/* Tablet Viewport: show tablet-desktop class, hide mobile class */
 	.tablet-desktop {
@@ -166,34 +172,125 @@ main {
 		padding: 0.1em 0.75em;
 	}
 	
-}
-/* END of Media Query for Tablet Viewport */
-
-/* #exercises {
+	/* Tablet Viewport: Style rules for main content area */
+	main ul {
+		margin: 0 0 4% 10%;
+	}
+	
+	#exercises {
 	clear: left;
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
-	background-color: #f2f2f2;
+	background: linear-gradient(to right, #ccc, #fff);
+/*	background-color: #f2f2f2;*/
 	padding: 1% 2%;
+	}
+
+	#exercises dt {
+		font-weight: bold;
+	}
+
+	#exercises dd {
+		padding: 0.5% 1% 2% 0;
+	}
+	
+	.tel-link {
+		font-size: 1.25em;
+	}
+	
+	.map {
+		width: 600px;
+		height: 450px;
+	}
+	
+	#contact {
+		text-align: center;
+	}
+	
+}
+/* END of Media Query for Tablet Viewport */
+
+/* Media Query for Desktop Viewport */
+@media screen and (min-width: 630px), print {
+
+	/* Desktop Viewport: Style rule for header */
+	header {
+		width: 25%;
+		float: left;
+		padding-bottom: 0;
+	}
+	
+	/* Desktop Viewport: Style rule for navigation */
+	nav {
+		float: right;
+		width: 70%;
+		margin: 4em 1em 0 0;
+	}
+	
+	nav ul {
+		text-align: right;
+	}
+	
+	nav li {
+		border: none;
+	}
+	
+	nav li a {
+		padding: 0.5em 1em;
+	}
+	
+	nav li a:hover {
+		color: #000;
+		background-color: #fff;
+	}
+	
+	/* Desktop Viewport: Style rules for main content */
+	main {
+		clear: both;
+	}
+	
+	main h1 {
+		font-size: 2em;
+	}
+	
+	#weights, #cardio, #training {
+		width: 29%;
+		float: left;
+		margin: 0 2%;
+	}
+	
+	#exercises {
+		clear: left;
+	}
+	
+}
+/* Closing Desktop Viewport */
+
+/* Large Screen Media Query */
+@media screen and (min-width: 1921) {
+	
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+}
+/* END Large Screen Media Query */
+
+
+/* Media Query for Print */
+@media print {
+	
+	body {
+		background-color: #fff;
+		color: #000;
+	}
+	
 }
 
-#exercises dt {
-	font-weight: bold;
-}
-
-#exercises dd {
-	padding: 0.5% 1% 2% 0;
-}
-*/
 #contact .contact-email-link {
 	color: #606;
 	text-decoration: none;
-}
-
-.map {
-	border: 8px solid #000;
-	width: 95%;
-	height: 50%;
 }
 
 /* Style rules for footer */
